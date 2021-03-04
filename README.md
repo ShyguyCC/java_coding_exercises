@@ -35,4 +35,4 @@ Install: https://maven.apache.org/install.html
 
 There are also a number of videos online guiding you through installation.
 
-Once you've got Java and Maven installed you can make a start - before you do please make sure to watch the [getting started video](https://storage.googleapis.com/your-return-to-tech/pre-journey/java_exercises_intro.mp4) as it walks you through instructions for getting started and the first exercise.
+Once you've got Java and Maven installed you can make a start - before you do please make sure to watch the [getting started video](https://storage.googleapis.com/your-return-to-tech/pre-journey/java_exercises_intro.mp4) as it walks you through instructions for getting started and the first exercise..
