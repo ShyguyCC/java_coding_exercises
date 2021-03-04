@@ -1,21 +1,28 @@
 package com.techreturners.exercise001;
 
+import java.io.Console;
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class Exercise001 {
     public String capitalizeWord(String word) {
         // Add your code here
-        return "";
+        //we first uppercase char 0 of word meaning the first letter, then add the rest with substring
+        return Character.toUpperCase(word.charAt(0)) + word.substring(1);
     }
 
     public String generateInitials(String firstName, String lastName) {
         // Add your code here
-        return "";
+        //using previous exersize get first char from first and last name and make sure they are uppercase.
+        return Character.toUpperCase(firstName.charAt(0)) + "." +Character.toUpperCase(lastName.charAt(0)) ;
     }
 
     public double addVat(double originalPrice, double vatRate) {
         // Add your code here
-        return 0.0;
+        double temp = originalPrice + ((vatRate / 100) * originalPrice);
+        temp = (double)Math.round(temp * 100d) / 100d;
+        
+        return temp;
     }
 
     public String reverse(String sentence) {
