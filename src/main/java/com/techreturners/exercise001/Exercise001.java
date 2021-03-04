@@ -20,14 +20,18 @@ public class Exercise001 {
     public double addVat(double originalPrice, double vatRate) {
         // Add your code here
         double temp = originalPrice + ((vatRate / 100) * originalPrice);
+        //this rounds up to 2 decimal places, number of zeros in round funtion = how many decimal places.
         temp = (double)Math.round(temp * 100d) / 100d;
-        
         return temp;
     }
 
     public String reverse(String sentence) {
         // Add your code here
-        return "";
+        String tempString = "";
+        for (int i = sentence.length(); i>0; i-- ){
+            tempString += sentence.charAt(i);
+        }
+        return tempString;
     }
 
     public int countLinuxUsers(List<User> users) {
