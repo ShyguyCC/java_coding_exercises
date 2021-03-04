@@ -27,8 +27,10 @@ public class Exercise001 {
 
     public String reverse(String sentence) {
         // Add your code here
+        //we create a temp string and add on the sentence from the last char to the first using a loop.
         String tempString = "";
-        for (int i = sentence.length(); i>0; i-- ){
+        for (int i = sentence.length() - 1; i >= 0 ; i-- ){
+            System.out.println(sentence.charAt(i));
             tempString += sentence.charAt(i);
         }
         return tempString;
@@ -36,6 +38,12 @@ public class Exercise001 {
 
     public int countLinuxUsers(List<User> users) {
         // Add your code here
-        return 0;
+        int counter = 0;
+        for(int i = 0; i < users.size(); i++){
+            if(users.get(i).getType() == "Linux"){
+                counter++;
+            }
+        }
+        return counter;
     }
 }
