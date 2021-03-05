@@ -27,8 +27,4 @@ public class Person {
     public int getAge() {
         return age;
     }
-    
-
-
-    //"Peter", "Smith", "Manchester", 23
 }

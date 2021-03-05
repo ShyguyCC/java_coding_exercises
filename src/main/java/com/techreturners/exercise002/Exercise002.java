@@ -3,7 +3,6 @@ package com.techreturners.exercise002;
 public class Exercise002 {
 
     public boolean isFromManchester(Person person) {
-        // Add your code here
         //using the get city function in object person we can see if the input person is from manchester.
         if(person.getCity() == "Manchester"){
             return true;
@@ -12,7 +11,6 @@ public class Exercise002 {
     }
     //same as previous funciton we can check the persons age with a get function and check if its over the age limit.
     public boolean canWatchFilm(Person person, int ageLimit) {
-        // Add your code here
         if(person.getAge() >= ageLimit){
             return true;
         }
