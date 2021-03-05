@@ -35,7 +35,9 @@ public class Exercise001 {
     public int countLinuxUsers(List<User> users) {
         int counter = 0;
         for(int i = 0; i < users.size(); i++){
-            if(users.get(i).getType() == "Linux"){
+            //we use .equals instead of === because equals check the proper values, where as === check the point in memory to see if its the same.
+            //For learning this means that if we created 2 strings they wont be at the same address therefor a == b = false; where a.equals(b) will be true.
+            if(users.get(i).getType().equals("Linux")){
                 counter++;
             }
         }
