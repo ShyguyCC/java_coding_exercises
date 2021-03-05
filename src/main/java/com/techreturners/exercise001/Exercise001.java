@@ -25,10 +25,10 @@ public class Exercise001 {
     public String reverse(String sentence) {
         //we create a temp string and add on the sentence from the last char to the first using a loop.
         String tempString = "";
-        for (int i = sentence.length() - 1; i >= 0 ; i-- ){
-            System.out.println(sentence.charAt(i));
-            tempString += sentence.charAt(i);
-        }
+        //sentence.foreach((n) -> { System.out.println(n); } );
+        //for (int i = sentence.length() - 1; i >= 0 ; i-- ){
+        //    tempString += sentence.charAt(i);
+        //}
         return tempString;
     }
 
