@@ -25,22 +25,30 @@ public class Exercise001 {
     public String reverse(String sentence) {
         //we create a temp string and add on the sentence from the last char to the first using a loop.
         String tempString = "";
-        //sentence.foreach((n) -> { System.out.println(n); } );
-        //for (int i = sentence.length() - 1; i >= 0 ; i-- ){
-        //    tempString += sentence.charAt(i);
-        //}
+        //what im trying to do is go from the last char to the first char and add each char to a string i return
+        //IntStream.range(sentence.length() -1, 1 ).forEach(i -> tempString += sentence.charAt(i));
+
+        
+        for (int i = sentence.length() - 1; i >= 0 ; i-- ){
+            tempString += sentence.charAt(i);
+        }
         return tempString;
     }
 
     public int countLinuxUsers(List<User> users) {
-        int counter = 0;
+         int counter = 0;
+        
+        //users.forEach((n) -> {if(users.get(i).getType().equals("Linux")){
+        //     counter++;
+        // }});
+        //users.forEach(u -> if(users.get(u).getType().equals("Linux") counter++));
         for(int i = 0; i < users.size(); i++){
-            //we use .equals instead of === because equals check the proper values, where as === check the point in memory to see if its the same.
-            //For learning this means that if we created 2 strings they wont be at the same address therefor a == b = false; where a.equals(b) will be true.
-            if(users.get(i).getType().equals("Linux")){
-                counter++;
-            }
-        }
+             //we use .equals instead of === because equals check the proper values, where as === check the point in memory to see if its the same.
+             //For learning this means that if we created 2 strings they wont be at the same address therefor a == b = false; where a.equals(b) will be true.
+             if(users.get(i).getType().equals("Linux")){
+                 counter++;
+             }
+         }
         return counter;
     }
 }
