@@ -4,7 +4,7 @@ public class Exercise002 {
 
     public boolean isFromManchester(Person person) {
         //using the get city function in object person we can see if the input person is from manchester.
-        if(person.getCity() == "Manchester"){
+        if(person.getCity().equals("Manchester")){
             return true;
         }
         return false;
