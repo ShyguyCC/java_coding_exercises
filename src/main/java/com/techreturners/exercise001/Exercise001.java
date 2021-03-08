@@ -3,6 +3,7 @@ package com.techreturners.exercise001;
 import java.io.Console;
 import java.text.DecimalFormat;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Exercise001 {
     public String capitalizeWord(String word) {
@@ -27,7 +28,7 @@ public class Exercise001 {
         String tempString = "";
         //what im trying to do is go from the last char to the first char and add each char to a string i return
         //IntStream.range(sentence.length() -1, 1 ).forEach(i -> tempString += sentence.charAt(i));
-
+        
         
         for (int i = sentence.length() - 1; i >= 0 ; i-- ){
             tempString += sentence.charAt(i);
@@ -36,12 +37,12 @@ public class Exercise001 {
     }
 
     public int countLinuxUsers(List<User> users) {
-         int counter = 0;
+         AtomicInteger counter = 0;
         
         // this returns no problems.
-        //users.forEach((n) -> {if(users.get(i).getType().equals("Linux")){
-        //    counter++;
-        //}});
+        users.forEach((n) -> {if(users.get(i).getType().equals("Linux")){
+            counter++;
+        }});
 
         //users.forEach(u -> if(users.get(u).getType().equals("Linux") counter++));
         // for(int i = 0; i < users.size(); i++){
@@ -51,6 +52,13 @@ public class Exercise001 {
         //          counter++;
         //      }
         //  }
+        //users.forEach(ar -> ar.getType().equals("Linux") ? counter++ : 0);// this is javascript
+        
+        //users.forEach((User temp) -> {
+        //    if(temp.getType().equals("Linux")){
+        //       counter++;
+        //   }
+        //});
         return counter;
     }
 }
