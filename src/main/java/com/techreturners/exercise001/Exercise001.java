@@ -4,6 +4,8 @@ import java.io.Console;
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Exercise001 {
     public String capitalizeWord(String word) {
@@ -37,28 +39,7 @@ public class Exercise001 {
     }
 
     public int countLinuxUsers(List<User> users) {
-         int counter = 0;
-        
-        // this returns no problems.
-        //users.forEach((n) -> {if(users.get(i).getType().equals("Linux")){
-        //    counter++;
-        //}});
-
-        //users.forEach(u -> if(users.get(u).getType().equals("Linux") counter++));
-         for(int i = 0; i < users.size(); i++){
-              //we use .equals instead of === because equals check the proper values, where as === check the point in memory to see if its the same.
-              //For learning this means that if we created 2 strings they wont be at the same address therefor a == b = false; where a.equals(b) will be true.
-              if(users.get(i).getType().equals("Linux")){
-                  counter++;
-              }
-          }
-        //users.forEach(ar -> ar.getType().equals("Linux") ? counter++ : 0);// this is javascript
-        
-        //users.forEach((User temp) -> {
-        //    if(temp.getType().equals("Linux")){
-        //       counter++;
-        //   }
-        //});
-        return counter;
+        List<User> temp = users.stream().filter(u -> u.getType().equals("Linux")).collect(Collectors.toList());
+        return temp.size();
     }
 }
