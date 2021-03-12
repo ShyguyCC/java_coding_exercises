@@ -26,19 +26,14 @@ public class Exercise001 {
     }
 
     public String reverse(String sentence) {
-        //we create a temp string and add on the sentence from the last char to the first using a loop.
-        String tempString = "";
-        //what im trying to do is go from the last char to the first char and add each char to a string i return
-        //IntStream.range(sentence.length() -1, 1 ).forEach(i -> tempString += sentence.charAt(i));
-        
-        
-        for (int i = sentence.length() - 1; i >= 0 ; i-- ){
-            tempString += sentence.charAt(i);
-        }
-        return tempString;
+        //unable to put this stright into a return as it needs to become a string first then we can return the answer.
+        //we now are able to use string buffer to break the sentence down, then reverse and then put it back into a string and put that answer to Answer.
+        String Answer = new StringBuffer(sentence).reverse().toString();
+        return reverse;
     }
 
     public int countLinuxUsers(List<User> users) {
+        //here we use the filter function to go through the users array and get any that have a getType of linux, then add that to a temp array. we then return the size of that array as thats how many times we have a true to the if statement within the filter.
         List<User> temp = users.stream().filter(u -> u.getType().equals("Linux")).collect(Collectors.toList());
         return temp.size();
     }
