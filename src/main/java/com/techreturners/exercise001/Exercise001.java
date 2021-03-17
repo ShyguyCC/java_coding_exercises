@@ -29,7 +29,7 @@ public class Exercise001 {
         //unable to put this stright into a return as it needs to become a string first then we can return the answer.
         //we now are able to use string buffer to break the sentence down, then reverse and then put it back into a string and put that answer to Answer.
         String Answer = new StringBuffer(sentence).reverse().toString();
-        return reverse;
+        return Answer;
     }
 
     public int countLinuxUsers(List<User> users) {
